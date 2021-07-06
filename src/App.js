@@ -246,7 +246,7 @@ class App extends React.Component {
     }).then(body => {
       let dataDeaths = [], dataConfirmed = [], dataRecovered= []
       let fullDatas = {}
-      body.Countries.map(countryObj => {
+      body.Countries.forEach((countryObj) => {
         dataDeaths.push({
           country: countryObj.CountryCode,
           value: countryObj.TotalDeaths
@@ -396,7 +396,7 @@ class App extends React.Component {
             <SelectorItems style={{color: "green", background: this.state.filterBy === "recovered" ? "#393939" : "transparent"}} id="recovered" onClick={(e) => this.changeFilter(e)} title="Filter by recovered case count">health_and_safety</SelectorItems>
           </Selector>
           <DataWrapper>
-            <DataHeader>Showing related data for the past 7 days</DataHeader>
+            <DataHeader>Showing related data</DataHeader>
             <HorizontalRule/>
             {this.state.currentCountryCode === "global" ?
             <DataNotice>Please select a country to view data</DataNotice>
