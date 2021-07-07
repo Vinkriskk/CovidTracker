@@ -52,5 +52,5 @@ jobs:
       with:
         app-name: 'COVIDMCC'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_2ce69cf52a1a4830850c7aa62c9ff28d }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_fb76d2aed3104d1aba7de00ed14c3fb9 }}
         package: .
